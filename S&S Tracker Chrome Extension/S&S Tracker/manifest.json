@@ -1,0 +1,32 @@
+{
+	"manifest_version": 3, 
+	"name": "S&S Task Tracker", 
+	"description": "This extension is used for Tracking Service & Support Task", 
+	"version": "1.0", 
+	"permissions": ["tabs"],	
+	"content_scripts": [
+		{
+			"js": [
+				"jquery.js", 
+				"tinysort.min.js",
+				"bililiteRange.js", 
+				"jquery.sendkeys.js",
+				"script.js"
+			],
+			"css": [
+				"main.css"
+			],
+			"matches": [ 
+				"*://www.wrike.com/*"
+
+			],
+			"host_permissions": ["*://*/*"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["script.js"],
+			"matches": ["https://*/*"]
+		  }
+    ]
+}
